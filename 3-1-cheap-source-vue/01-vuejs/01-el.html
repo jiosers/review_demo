@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-el</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>vue-el</h1>
+        </header>
+        <section>
+            <div>
+                <span>姓名：{{name}}</span>
+            </div>
+            <div>
+                <span>年纪：{{age}}</span>
+            </div>
+            <div>
+                <span>技能：</span>
+                <ul>
+                    <li v-for="item in skill" :key="item">{{item}}</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                name: 'june',
+                age: 26,
+                skill: ['javascript', 'css', 'es6', 'vue', 'node', 'mysql']
+            }
+        })
+    </script>
+</body>
+</html>
